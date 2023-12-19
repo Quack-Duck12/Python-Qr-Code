@@ -38,6 +38,14 @@ class MyGUI(QMainWindow):
             self.Output.clear()
 
         Path = self.Filepath.text()
+
+        Path = str(self.Filepath.text())
+        try:
+            Path = Path.lstrip('"')
+            Path = Path.rstrip('"')
+        except:
+            pass
+
         self.Display.setPixmap(QPixmap(Path).scaled(400,400, Qt.KeepAspectRatio))
 
         self.Output.insertPlainText((Qr_Read(Path)))
@@ -46,6 +54,13 @@ class MyGUI(QMainWindow):
 
         Data = self.Output.toPlainText()
         Path = self.Filepath.text()
+
+        Path = str(self.Filepath.text())
+        try:
+            Path = Path.lstrip('"')
+            Path = Path.rstrip('"')
+        except:
+            pass
 
         Filesave(Data,Path)
 
