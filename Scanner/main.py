@@ -40,11 +40,7 @@ class MyGUI(QMainWindow):
         Path = self.Filepath.text()
 
         Path = str(self.Filepath.text())
-        try:
-            Path = Path.lstrip('"')
-            Path = Path.rstrip('"')
-        except:
-            pass
+        Path = Path.rstrip('"').lstrip('"')
 
         self.Display.setPixmap(QPixmap(Path).scaled(400,400, Qt.KeepAspectRatio))
 
@@ -56,11 +52,7 @@ class MyGUI(QMainWindow):
         Path = self.Filepath.text()
 
         Path = str(self.Filepath.text())
-        try:
-            Path = Path.lstrip('"')
-            Path = Path.rstrip('"')
-        except:
-            pass
+        Path = Path.rstrip('"').lstrip('"')
 
         Filesave(Data,Path)
 

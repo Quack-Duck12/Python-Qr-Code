@@ -29,6 +29,7 @@ class MyGUI(QMainWindow):
         filelocate = str(self.Locationbox.text())
 
         if filelocate not in [""," "]:
+            filelocate = filelocate.rstrip('"').lstrip('"')
             filelocate = filelocate + "\\"
 
         if version in ["", " "] or not version.isdigit():
