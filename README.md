@@ -1,2 +1,2 @@
-# Python-Qr-Code-Generator
+# Python-Qr-Code
  
