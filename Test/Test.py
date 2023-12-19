@@ -3,6 +3,12 @@ from random import choice,randint
 from pyzbar.pyzbar import decode
 from PIL import Image
 
+import os
+
+if not os.path.exists("TestImage"):
+    os.makedirs("TestImage")
+
+
 Test_Num = int(input("Enter Number Of Test Images: "))+1
 
 def Generate_QR(data, ver, bord, colour,name,locate):
