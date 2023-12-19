@@ -7,8 +7,8 @@ import pycountry
 
 import os
 
-if not os.path.exists("TestImage"):
-    os.makedirs("TestImage")
+if not os.path.exists("Test\\TestImage"):
+    os.makedirs("Test\\TestImage")
 
 
 Test_Num = int(input("Enter Number Of Test Images: "))+1
@@ -43,15 +43,15 @@ colour = ['white','gray','yellow','green','red','blue','cyan','gold','silver','p
 
 
 print("Generating Qr-Code\n")
-for i in range(Test_Num):
+for i in range(1,Test_Num):
 
-    Generate_QR(choice(Country),randint(1,40),randint(0,50),choice(colour),f"Test_{i}.png","TestImage\\")
+    Generate_QR(choice(Country),randint(1,40),randint(0,50),choice(colour),f"Test_{i}.png","Test\\TestImage\\")
     print(f"Number_{i} Done")
     print()
 
 print("Scanning Qr-Code\n")
-for i in range(Test_Num):
+for i in range(1,Test_Num):
     print(f"Test_{i}")
-    Qr_Read(f"TestImage\Test_{i}.png")
+    Qr_Read(f"Test\\TestImage\Test_{i}.png")
     print()
 

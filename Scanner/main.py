@@ -9,7 +9,7 @@ class MyGUI(QMainWindow):
 
     def __init__(self):
         super(MyGUI,self).__init__()
-        uic.loadUi("..\\UI\\Reader.ui",self)
+        uic.loadUi("UI\\Reader.ui",self)
         self.show()
 
         self.currentfile = ""
@@ -20,7 +20,7 @@ class MyGUI(QMainWindow):
 
         self.Readbutton.clicked.connect(self.Read)
 
-        self.Display.setPixmap(QPixmap("..\\UI\\StartUp.png").scaled(400,400, Qt.KeepAspectRatio))
+        self.Display.setPixmap(QPixmap("UI\\StartUp.png").scaled(400,400, Qt.KeepAspectRatio))
         self.Output.insertPlainText("Follow Me At: https://github.com/Quack-Duck12")
         
     def Exit(self):
@@ -30,7 +30,7 @@ class MyGUI(QMainWindow):
         self.Filepath.clear()
         self.Output.clear()
 
-        self.Display.setPixmap(QPixmap("..\\UI\\StartUp.png").scaled(400,400, Qt.KeepAspectRatio))
+        self.Display.setPixmap(QPixmap("UI\\StartUp.png").scaled(400,400, Qt.KeepAspectRatio))
 
     def Read(self):
 

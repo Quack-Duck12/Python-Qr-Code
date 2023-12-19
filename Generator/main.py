@@ -9,7 +9,7 @@ class MyGUI(QMainWindow):
 
     def __init__(self):
         super(MyGUI,self).__init__()
-        uic.loadUi("..\\UI\\Generator.ui",self)
+        uic.loadUi("UI\\Generator.ui",self)
         self.show()
 
         self.currentfile = ""
@@ -18,7 +18,7 @@ class MyGUI(QMainWindow):
         self.ExitButton.triggered.connect(self.Exit)
         self.ClearButton.triggered.connect(self.Clear)
 
-        self.Display.setPixmap(QPixmap("..\\UI\\StartUp.png").scaled(441, 441, Qt.KeepAspectRatio))
+        self.Display.setPixmap(QPixmap("UI\\StartUp.png").scaled(441, 441, Qt.KeepAspectRatio))
 
     def Generate(self):
         data = self.Databox.text()
@@ -59,7 +59,7 @@ class MyGUI(QMainWindow):
         self.Colourbox.setCurrentIndex(0)
         self.Filetype.setCurrentIndex(0)
 
-        self.Display.setPixmap(QPixmap("..\\UI\\StartUp.png").scaled(441, 441, Qt.KeepAspectRatio))
+        self.Display.setPixmap(QPixmap("UI\\StartUp.png").scaled(441, 441, Qt.KeepAspectRatio))
 
         
 
